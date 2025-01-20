@@ -2,7 +2,7 @@
 class EventEmitter {
     constructor() {
         this.events = {};
-    } //Конструктор класса, который вызывается при создании нового экземпляра EventEmitter.
+    } // Конструктор класса, который вызывается при создании нового экземпляра EventEmitter.
 
     on(eventName, listener) {
         if (!this.events[eventName]) {
@@ -15,7 +15,7 @@ class EventEmitter {
         if (this.events[eventName]) {
             this.events[eventName].forEach(listener => {
                 listener(...args);
-            }); //Если слушатели существуют, перебирает их и вызывает функции, передавая им аргументы.
+            }); // Если слушатели существуют, перебирает их и вызывает функции, передавая им аргументы.
         }
     }
 
@@ -30,8 +30,8 @@ class EventEmitter {
     hasListeners(eventName) {
         return this.events[eventName] && this.events[eventName].length > 0;
     }
-    //Этот метод проверяет, есть ли слушатели для заданного события. 
-    //Он возвращает true, если есть хотя бы один слушатель, и false в противном случае.
+    // Этот метод проверяет, есть ли слушатели для заданного события. 
+    // Он возвращает true, если есть хотя бы один слушатель, и false в противном случае.
 }
 
 // Пример использования
